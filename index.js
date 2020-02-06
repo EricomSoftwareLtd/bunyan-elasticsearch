@@ -48,7 +48,7 @@ function ElasticsearchStream (options) {
                   const index = [(options.writeIndexPrefix || 'reports-'), moment().format(options.dateFormat || 'YYYY.MM.DD')].join('');
                   try {
                       const bulkResult = await client.bulk(dataset, index);
-                      console.log(bulkResult);
+                      //console.log(bulkResult);
                   } catch(e) {
                       if(options.logLevel === 'trace') {
                           console.error(e);
